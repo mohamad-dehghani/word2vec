@@ -4,7 +4,7 @@ import codecs
 import pandas as pd
 import re
 
-df = pd.read_excel('book4.xlsx', header=None)
+df = pd.read_excel('test.xlsx', header=None)
 df.columns = ['comment']
 
 df['embedding'] = ''
@@ -16,7 +16,7 @@ my_normalizer = Normalizer()
 def normalize(txt):
     return my_normalizer.normalize(txt)
 
-df['normalized_txt'] = df['comment'].apply(normalize)
+#df['normalized_txt'] = df['comment'].apply(normalize)
 
 from parsivar import Tokenizer
 my_tokenizer = Tokenizer()
