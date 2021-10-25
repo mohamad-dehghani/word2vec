@@ -16,7 +16,7 @@ my_normalizer = Normalizer()
 def normalize(txt):
     return my_normalizer.normalize(txt)
 
-# df['normalized_txt'] = df['comment'].apply(normalize)
+df['normalized_txt'] = df['comment'].apply(normalize)
 
 from parsivar import Tokenizer
 my_tokenizer = Tokenizer()
